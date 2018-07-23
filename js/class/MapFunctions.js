@@ -16,15 +16,18 @@ export default class MapFunctions {
         });
         this.addControls(map);
     }
+
     addControls(map) {
         this.navigationControl(map);
         this.addScaleControl(map);
         this.addLocationControl(map);
     }
+
     navigationControl(map) {
         var nav = new mapboxgl.NavigationControl();
         map.addControl(nav, 'top-right');
     }
+
     addScaleControl(map) {
         var scale = new mapboxgl.ScaleControl({
             maxWidth: 80,
@@ -32,6 +35,7 @@ export default class MapFunctions {
         });
         map.addControl(scale);
     }
+    
     addLocationControl(map) {
         map.addControl(new mapboxgl.GeolocateControl({
             positionOptions: {

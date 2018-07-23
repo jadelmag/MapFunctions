@@ -4,7 +4,7 @@
     <meta charset='utf-8' />
     <title>Map Generator</title>
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-    <script type="module" src='./js/index.js'></script>
+    <script src="./js/index.js"></script>
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.46.0/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.46.0/mapbox-gl.css' rel='stylesheet' />
     <style>
@@ -14,8 +14,14 @@
 </head>
 <body>
     <div id="map"></div>
+    <!-- <script type="module">
+        // this option works
+        import MapFunctions from './js/class/MapFunctions.js';
+        let map = new MapFunctions().createMap("openstreetmaps", "map");
+    </script> -->
     <script>
-        // customMap.addMap("map");
+        // this option doesnt work, why??
+        customMap.addMap("openstreetmaps", "map");
     </script>
 </body>
 </html>
